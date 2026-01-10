@@ -1,39 +1,90 @@
+<div align="center">
+
+# 🎮 MineBlaze Server
+
+<div style="
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  padding: 50px 30px;
+  border-radius: 30px;
+  margin: 30px 0;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(106, 17, 203, 0.3);
+  position: relative;
+  overflow: hidden;
+">
+
+<div style="
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+  background: linear-gradient(90deg, #ff9af5, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 20px 0;
+">
+mc.mineblaze.net
+</div>
+
+<div style="
+  margin: 40px 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+">
+
+<div style="
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 15px;
+">
+Для проживающих в РФ
+</div>
+
+<div style="
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffccff;
+  text-shadow: 0 0 20px rgba(255, 204, 255, 0.5);
+  background: linear-gradient(90deg, #e0b3ff, #ffb3ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+">
+mc.mineblaze.ru
+</div>
+
+</div>
+
+</div>
+
 ---
-title: MineBlaze
-style: |
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      position: relative;
-      overflow-x: hidden;
-    }
-    
-    body::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: 
-        radial-gradient(circle at 20% 80%, rgba(157, 80, 255, 0.3) 0%, transparent 40%),
-        radial-gradient(circle at 80% 20%, rgba(255, 119, 230, 0.3) 0%, transparent 40%),
-        radial-gradient(circle at 40% 40%, rgba(106, 17, 203, 0.4) 0%, transparent 50%);
+
+### 🎯 Особенности сервера
+- 🌟 **Высокий аптайм** - 99.9% доступность
+- ⚡ **Низкий пинг** - оптимизированное соединение
+- 🛡️ **Защита от гриферов** - современные системы безопасности
+- 🎨 **Кастомные плагины** - уникальный игровой опыт
+- 👥 **Активное комьюнити** - дружелюбные игроки
+
+### 📊 Статистика
+![Статистика сервера](https://img.shields.io/badge/Игроки%20онлайн-150%2B-blueviolet)
+![Версия](https://img.shields.io/badge/Версия-1.20.1-purple)
+![Рейтинг](https://img.shields.io/badge/Рейтинг-⭐4.9%2F5-ff69b4)
+
+### 🔗 Быстрые ссылки
+[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/mineblaze)
+[![Вконтакте](https://img.shields.io/badge/Вконтакте-0077FF?style=for-the-badge&logo=vk&logoColor=white)](https://vk.com/mineblaze)
+[![Telegram](https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/mineblaze)
+
+### 🎨 Цветовая схема
+```css
+Основные цвета:
+Фиолетовый: #6a11cb
+Пурпурный: #a855f7
+Розовый: #ff9af5
+Светло-фиолетовый: #e0b3ff        radial-gradient(circle at 40% 40%, rgba(106, 17, 203, 0.4) 0%, transparent 50%);
       z-index: -1;
       animation: pulse 8s ease-in-out infinite alternate;
     }
