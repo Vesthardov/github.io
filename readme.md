@@ -3,56 +3,146 @@
 # 🎮 MineBlaze Server
 
 <div style="
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-  padding: 50px 30px;
-  border-radius: 30px;
-  margin: 30px 0;
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 40px rgba(106, 17, 203, 0.3);
+  background: linear-gradient(135deg, #6a11cb 0%, #8a2be2 30%, #ba55d3 70%, #ff69b4 100%);
+  padding: 60px 40px;
+  border-radius: 35px;
+  margin: 40px 0;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 
+    0 25px 50px rgba(106, 17, 203, 0.4),
+    0 0 100px rgba(186, 85, 211, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
   position: relative;
   overflow: hidden;
+  animation: gradientShift 8s ease infinite alternate;
 ">
 
+<style>
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+</style>
+
 <div style="
-  font-size: 3.5rem;
-  font-weight: 800;
+  font-size: 4.2rem;
+  font-weight: 900;
   color: white;
-  text-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
-  background: linear-gradient(90deg, #ff9af5, #a855f7);
+  text-shadow: 
+    0 0 40px rgba(255, 255, 255, 0.8),
+    0 0 80px rgba(168, 85, 247, 0.6),
+    0 0 120px rgba(255, 154, 245, 0.4);
+  background: linear-gradient(45deg, #ff9af5, #d870ff, #a855f7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin: 20px 0;
+  background-size: 200% auto;
+  animation: textShimmer 3s ease-in-out infinite alternate;
+  margin: 25px 0;
+  letter-spacing: 1px;
+  font-family: 'Arial Black', 'Segoe UI', sans-serif;
 ">
+
+@keyframes textShimmer {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
 mc.mineblaze.net
 </div>
 
 <div style="
-  margin: 40px 0;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 30px 0;
+  flex-wrap: wrap;
 ">
 
 <div style="
-  font-size: 1.8rem;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px 30px;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
 ">
-Для проживающих в РФ
+<div style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.8); margin-bottom: 8px;">
+🎮 Версия
+</div>
+<div style="font-size: 2rem; font-weight: bold; color: #ffccff;">
+1.8 - 1.21
+</div>
 </div>
 
 <div style="
-  font-size: 2.5rem;
-  font-weight: 700;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px 30px;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+">
+<div style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.8); margin-bottom: 8px;">
+👥 Игроков онлайн
+</div>
+<div style="font-size: 2rem; font-weight: bold; color: #ffccff;">
+6000+
+</div>
+</div>
+
+</div>
+
+<div style="
+  margin: 50px 0 30px 0;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 25px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+">
+
+<div style="
+  font-size: 2.2rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+">
+🇷🇺 Для проживающих в РФ
+</div>
+
+<div style="
+  font-size: 3.2rem;
+  font-weight: 800;
   color: #ffccff;
-  text-shadow: 0 0 20px rgba(255, 204, 255, 0.5);
-  background: linear-gradient(90deg, #e0b3ff, #ffb3ff);
+  text-shadow: 
+    0 0 25px rgba(255, 204, 255, 0.7),
+    0 0 50px rgba(186, 85, 211, 0.5);
+  background: linear-gradient(45deg, #ffb3ff, #cc99ff, #e0b3ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  margin: 10px 0;
 ">
 mc.mineblaze.ru
+</div>
+
+<div style="
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 20px;
+  font-style: italic;
+  opacity: 0.9;
+">
+Оптимизированный хостинг для максимальной скорости в России
 </div>
 
 </div>
@@ -61,22 +151,40 @@ mc.mineblaze.ru
 
 ---
 
-### 🎯 Особенности сервера
-- 🌟 **Высокий аптайм** - 99.9% доступность
-- ⚡ **Низкий пинг** - оптимизированное соединение
-- 🛡️ **Защита от гриферов** - современные системы безопасности
-- 🎨 **Кастомные плагины** - уникальный игровой опыт
-- 👥 **Активное комьюнити** - дружелюбные игроки
+### 🚀 **Основные возможности**
+| Особенность | Описание |
+|------------|----------|
+| **🎯 Поддержка версий** | Полная поддержка с 1.8 по 1.21 |
+| **👥 Онлайн** | Стабильно **6000+** игроков одновременно |
+| **⚡ Производительность** | Оптимизированный сервер на мощном железе |
+| **🛡️ Защита** | Современная античит система |
+| **🌐 Доступность** | Два домена для разных регионов |
 
-### 📊 Статистика
-![Статистика сервера](https://img.shields.io/badge/Игроки%20онлайн-150%2B-blueviolet)
-![Версия](https://img.shields.io/badge/Версия-1.20.1-purple)
-![Рейтинг](https://img.shields.io/badge/Рейтинг-⭐4.9%2F5-ff69b4)
+### 📊 **Статистика в реальном времени**
+![Текущий онлайн](https://img.shields.io/badge/Онлайн_сейчас-6000%2B-success?style=for-the-badge&color=9d4edd)
+![Максимальный онлайн](https://img.shields.io/badge/Рекорд-7500-important?style=for-the-badge&color=ff6ec7)
+![Версии](https://img.shields.io/badge/Версии-1.8–1.21-blueviolet?style=for-the-badge)
+![Аптайм](https://img.shields.io/badge/Аптайм-99.9%25-brightgreen?style=for-the-badge)
 
-### 🔗 Быстрые ссылки
-[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/mineblaze)
-[![Вконтакте](https://img.shields.io/badge/Вконтакте-0077FF?style=for-the-badge&logo=vk&logoColor=white)](https://vk.com/mineblaze)
-[![Telegram](https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/mineblaze)
+### 🎨 **Особенности сервера**
+- 🔥 **Кастомные моды** – Уникальные плагины и модификации
+- 🏆 **Система рангов** – Прогрессивная система достижений
+- 🎪 **Миниигры** – Более 20 различных режимов игры
+- 🏰 **Своя экономика** – Развитая экономическая система
+- 📱 **Мобильная оптимизация** – Идеально для Pocket Edition
+
+### 🌍 **Доступность**
+```yaml
+Основной домен (международный):
+  - mc.mineblaze.net
+  - Поддержка: 1.8 - 1.21
+  - Пинг: оптимизирован для всех стран
+
+Российский домен:
+  - mc.mineblaze.ru
+  - Поддержка: 1.8 - 1.21  
+  - Пинг: < 20ms для РФ
+  - Онлайн: 6000+ игроков[![Telegram](https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/mineblaze)
 
 ### 🎨 Цветовая схема
 ```css
