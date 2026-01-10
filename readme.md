@@ -1,52 +1,240 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube 2.0</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="Logo.png" type="image/png">
-</head>
-<body>
-    <!-- Шапка -->
-    <header class="header">
-        <div class="header-left">
-            <button class="menu-btn" id="menuBtn">
-                <svg viewBox="0 0 24 24" width="24" height="24">
-                    <path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
-                </svg>
-            </button>
-            <a href="#" class="logo" id="homeBtn">
-                <img src="Logo.png" alt="YouTube 2.0" class="logo-img">
-                <span class="logo-text">YouTube 2.0</span>
-            </a>
-        </div>
-        
-        <div class="header-center">
-            <div class="search-container">
-                <input type="text" class="search-input" id="searchInput" placeholder="Введите запрос">
-                <button class="search-btn">
-                    <svg viewBox="0 0 24 24" width="24" height="24">
-                        <path fill="currentColor" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        
-        <div class="header-right">
-            <button class="icon-btn" id="uploadBtn" title="Загрузить видео">
-                <svg viewBox="0 0 24 24" width="24" height="24">
-                    <path fill="currentColor" d="M14 13h-3v3H9v-3H6v-2h3V8h2v3h3v2zm3-7H3v12h14v-6.39l4 1.83V8.56l-4 1.83V6m1-1v3.83L22 7v8l-4-1.83V19H2V5h16z"></path>
-                </svg>
-            </button>
-            <button class="icon-btn">
-                <svg viewBox="0 0 24 24" width="24" height="24">
-                    <path fill="currentColor" d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"></path>
-                </svg>
-            </button>
-            <button class="avatar-btn" id="userAvatarBtn">
-                <div class="avatar">U</div>
-            </button>
+---
+title: MineBlaze
+style: |
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      overflow-x: hidden;
+    }
+    
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(157, 80, 255, 0.3) 0%, transparent 40%),
+        radial-gradient(circle at 80% 20%, rgba(255, 119, 230, 0.3) 0%, transparent 40%),
+        radial-gradient(circle at 40% 40%, rgba(106, 17, 203, 0.4) 0%, transparent 50%);
+      z-index: -1;
+      animation: pulse 8s ease-in-out infinite alternate;
+    }
+    
+    @keyframes pulse {
+      0% { opacity: 0.8; }
+      100% { opacity: 1; }
+    }
+    
+    .main-container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 30px;
+      padding: 50px 70px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+      max-width: 800px;
+      margin: 20px;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    
+    .main-container::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0) 30%
+      );
+      transform: rotate(30deg);
+      z-index: -1;
+    }
+    
+    .server-address {
+      font-size: 4.5rem;
+      font-weight: 800;
+      margin-bottom: 40px;
+      text-shadow: 
+        0 5px 15px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(157, 80, 255, 0.5);
+      letter-spacing: 1px;
+      background: linear-gradient(90deg, #ff9af5, #a855f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: glow 3s ease-in-out infinite alternate;
+    }
+    
+    @keyframes glow {
+      0% { filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.7)); }
+      100% { filter: drop-shadow(0 0 25px rgba(255, 154, 245, 0.9)); }
+    }
+    
+    .separator {
+      width: 80%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+      margin: 50px auto;
+    }
+    
+    .russian-section {
+      margin-top: 40px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .russian-label {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+    
+    .russian-address {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #ffccff;
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(90deg, #e0b3ff, #ffb3ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+      margin-top: 15px;
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: 300;
+      max-width: 500px;
+      line-height: 1.6;
+    }
+    
+    .particles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -2;
+    }
+    
+    .particle {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      animation: float 15s infinite linear;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+    }
+    
+    @media (max-width: 768px) {
+      .server-address {
+        font-size: 3rem;
+      }
+      
+      .russian-address {
+        font-size: 2rem;
+      }
+      
+      .main-container {
+        padding: 30px;
+        margin: 15px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .server-address {
+        font-size: 2.2rem;
+      }
+      
+      .russian-address {
+        font-size: 1.6rem;
+      }
+      
+      .main-container {
+        padding: 25px 20px;
+      }
+    }
+  </style>
+---
+
+<div class="main-container">
+  <h1 class="server-address">mc.mineblaze.net</h1>
+  <p class="subtitle">Присоединяйтесь к нашему удивительному игровому сообществу</p>
+  
+  <div class="separator"></div>
+  
+  <div class="russian-section">
+    <div class="russian-label">Для проживающих в РФ</div>
+    <div class="russian-address">mc.mineblaze.ru</div>
+    <p class="subtitle">Оптимизированное соединение для российских игроков</p>
+  </div>
+</div>
+
+<div class="particles" id="particles"></div>
+
+<script>
+  // Создание частиц для фона
+  document.addEventListener('DOMContentLoaded', function() {
+    const particlesContainer = document.getElementById('particles');
+    const particleCount = 30;
+    
+    for (let i = 0; i < particleCount; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      
+      // Случайные параметры
+      const size = Math.random() * 15 + 5;
+      const posX = Math.random() * 100;
+      const delay = Math.random() * 15;
+      const duration = Math.random() * 10 + 15;
+      
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      particle.style.left = `${posX}%`;
+      particle.style.animationDelay = `${delay}s`;
+      particle.style.animationDuration = `${duration}s`;
+      
+      // Пурпурные оттенки
+      const purpleHue = Math.random() * 30 + 270;
+      particle.style.background = `hsla(${purpleHue}, 80%, 70%, ${Math.random() * 0.3 + 0.1})`;
+      
+      particlesContainer.appendChild(particle);
+    }
+  });
+</script>            </button>
         </div>
     </header>
 
